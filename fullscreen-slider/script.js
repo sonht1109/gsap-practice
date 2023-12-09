@@ -1,9 +1,15 @@
+import gsap, { Power1 } from "gsap";
+
 document.addEventListener("DOMContentLoaded", () => {
   const cols = 5;
   const main = document.getElementById("main");
   let parts = [];
 
-  let images = ["images/image-1.png", "images/image-2.jpeg", "images/image-3.webp"];
+  let images = [
+    "images/image-1.png",
+    "images/image-2.jpeg",
+    "images/image-3.webp",
+  ];
   let current = 0;
   let playing = false;
 

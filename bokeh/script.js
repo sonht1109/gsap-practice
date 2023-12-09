@@ -1,3 +1,5 @@
+import gsap, { Power0 } from "gsap";
+
 const COUNT = 20;
 
 const container = document.querySelector("#container");

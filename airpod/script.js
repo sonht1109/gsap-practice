@@ -1,7 +1,9 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const FRAME_COUNT = 65;
-let currentFrame = 0;
 const obj = {
   frame: 0,
 };
@@ -30,7 +32,7 @@ const render = () => {
   canvas.width = window.innerWidth;
   canvas.height = canvas.width / ratio;
   ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-  ctx.drawImage(img, 0, 0, canvas.clientWidth, canvas.clientHeight);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
 
 images[0].onload = render;
@@ -40,7 +42,7 @@ window.onresize = () => {
 };
 
 gsap.to(obj, {
-  frame: FRAME_COUNT,
+  frame: FRAME_COUNT - 1,
   snap: "frame",
   ease: "none",
   scrollTrigger: {
