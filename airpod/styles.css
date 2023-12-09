@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-color: black;
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+}
+
+.container {
+  height: 230vh;
+}
+
+.container h1 {
+  font-size: 14.6vw;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.sticky-hero {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sticky-hero .image-sequence-container-hero {
+  position: absolute;
+  inset: 0;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-hero .hero-lookup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sticky-hero .hero-payoff {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.025em;
+  opacity: 0;
+}
+
+#hero-lightpass {
+  width: 100%;
+}
