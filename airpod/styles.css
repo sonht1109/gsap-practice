@@ -13,28 +13,29 @@ body {
 }
 
 .container {
-  height: 230vh;
-}
-
-.container h1 {
-  font-size: 14.6vw;
-  text-align: center;
-  will-change: transform, opacity;
+  height: 250vh;
 }
 
 .sticky-hero {
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow: hidden;
 }
 
 .sticky-hero .image-sequence-container-hero {
   position: absolute;
   inset: 0;
-  top: -100px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-sequence-container-inner-hero {
+  position: relative;
+  padding-bottom: 34.8148148148%;
+  transform: translateY(8%);
 }
 
 .sticky-hero .hero-lookup {
@@ -45,6 +46,13 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.hero-lookup h1 {
+  font-size: 14.6vw;
 }
 
 .sticky-hero .hero-payoff {
@@ -61,6 +69,7 @@ body {
   opacity: 0;
 }
 
-#hero-lightpass {
-  width: 100%;
+#image-sequence-container-hero {
+  opacity: 0;
+  will-change: transform, opacity;
 }
